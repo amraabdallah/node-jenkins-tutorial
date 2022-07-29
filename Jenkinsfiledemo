@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Getting Repo Files') {
+            steps {
+                git branch: "${GIT_BRANCH}", url: ''
+            }
+        }
+        
+        stage('Building Code') {
+            steps {
+                sh "docker build -t mynodeapp:v1.0 ."
+            }
+        }
+    }
+}
