@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Getting Repo Files') {
             steps {
-                git branch: 'main', credentialsId: 'github-cred', url: 'https://github.com/amraabdallah/node-jenkins-tutorial'
+                git branch: 'main', url: 'https://github.com/amraabdallah/node-jenkins-tutorial'
             }
         }
         
